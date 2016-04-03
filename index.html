@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Betty Cricket</title>
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <link rel="icon" href="favicon.ico">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <script type="text/javascript">
+		 $(document).ready(function() {
+			$('#fullpage').fullpage({
+				loopTop: true,
+				loopBottom: true,
+                anchors: ['Home', 'secondPage', '3rdPage', '4thpage'],
+                afterLoad: function(anchorLink, index){
+					//section 2
+					if(anchorLink == 'secondPage'){
+						$('#section2').find('h1').first().fadeIn(1800,function(){
+                        $('#section2').find('p').first().fadeIn(1800,function(){
+                        $('#section2').find('p').last().fadeIn(1800);
+                        });});
+                    }
+                    if(anchorLink == '3rdPage'){
+						
+                    }
+				}
+            });  
+		});
+	</script>
+    </head>
+    <body>
+        <div id="header">
+            <img id='miniLogo' src="Betty-Cricket.svg">
+            <a href="http://www.twitter.com/BettyCricket" class="social-buttons brandico-twitter-bird"></a>
+            <a href="http://www.facebook.com/BettyCricket1" class="social-buttons brandico-facebook"></a>
+        </div>
+        <div id='fullpage'>
+            <div class="section" id="Intro">
+                <div class="image">
+                    <img id='mainlogo' src="Betty-Cricket-main.svg">
+                </div>
+                <div id='SquishStigma'>
+                    #SquishingTheStigma
+                </div>
+            </div> 
+            <div class="section" id="section2">
+                <div class="text" style='height:100%;margin-top:10%;'>
+                    <h1>Why Crickets?</h1>
+                    <p>Crickets are an alternative and more sustainable source of protein.</p>
+                    <p>It takes 2000 more gallons of water to produce a pound of beef than a pound of crickets.</p>
+                </div>
+            </div>    
+            <div class="section" id="section3">
+                <iframe width="100%" height="100%"
+                    src="https://www.youtube.com/embed/AkNA6XOmIhM?autoplay=0&showinfo=0&controls=0"
+                    allowfullscreen
+                    autoplay=0>
+                </iframe>
+            </div>    
+            <div class="section" id="section4">
+                <div class="slide">
+                    <h1></h1>
+                </div>
+                <div class="slide">
+                </div>
+            </div>       
+        </div>
+    </body>
+</html>
