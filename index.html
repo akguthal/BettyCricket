@@ -15,11 +15,15 @@
 				loopTop: true,
 				loopBottom: true,
                 anchors: ['Home', '2ndPage', '3rdPage', '4thpage','5thpage'],
+                navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Home', 'About Us', 'Why Crickets?','Cricket Milkshakes','Our Partners'],
                 afterLoad: function(anchorLink, index){
                     if (anchorLink== 'Home'){
                         $('#mainlogo').fadeIn(1800,function(){
                             $('#header').fadeIn(1200);
                             $('#SquishStigma').fadeTo(1200,1);
+                            $('#fp-nav').fadeTo(1200,1);
                         });
                     }
 					if(anchorLink == '2ndPage'){
