@@ -6,32 +6,9 @@ background-color: #ed1b24;
 }
 
 #mainlogo{
-display:block;
-margin:auto;
-height:30%;
-width:30%;
--webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
--moz-animation: fadein 3s; /* Firefox < 16 */
--ms-animation: fadein 3s; /* Internet Explorer */
--o-animation: fadein 3s; /* Opera < 12.1 */
-animation: fadein 3s; 
-}
-/* Safari, Chrome and Opera > 12.1 */
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes delayedFade{
-0% {opacity:0;}
-60% {opacity:0;}
-100% {opacity:100;}
-}
-
-@keyframes headerFade{
-0% {opacity:0;}
-60% {opacity:0;}
-100% {opacity:0.7;}
+display:none;
+height:40%;
+width:40%;
 }
 
 #SquishStigma{
@@ -39,27 +16,17 @@ font-size:5vw;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 color: #FFFFFF;
 text-align: center;
-animation-name:delayedFade;
-animation-duration:3s;
+opacity:0;
 }
 
 #header{
     position:fixed;
-    display:block;
+    display:none;
     color: #FFFFFF;
     width:100%;
     height:30px;
     background:#FFFFFF;
     z-index:9;
-    animation-name:headerFade;
-    animation-duration:3s;
-    opacity:0.7;
-      -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  /* ...and now for the proper property */
-  transition:.5s;
 }
 
 #header:hover{
@@ -76,15 +43,37 @@ height:30px;
     background:#000000;
 }
 
-#section2{
-    background-image:url("cricket_bg.jpg");
+#section3{
+    background-image:url("cricket_bg.png");
     background-size: cover;
     background-attachment: fixed;
 }
 
-#section4{
-  background:#7BAABE;
+    
+    /* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section4 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section4{
+		overflow: hidden;
+	}
+
+#section5{
+    background-image:url("handshake.jpg");
+    background-size:cover;
+    background-attachment:fixed;
 }
+
+    #section2{
+        background:#F1781B;
+    }
 
 /* brandico */
 [class*="brandico-"]:before {
@@ -132,7 +121,7 @@ h1{
     color:#FFFFFF;
     font-size:5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display:none;
+    opacity:0;
 }
 
 p{
@@ -159,17 +148,26 @@ p{
    		z-index:3;
 	}
     
-    /* Layer with position absolute in order to have it over the video
-	* --------------------------------------- */
-	#section3 .layer{
-		position: absolute;
-		z-index: 4;
-		width: 100%;
-		left: 0;
-		top: 43%;
-	}
-
-	/*solves problem with overflowing video in Mac with Chrome */
-	#section3{
-		overflow: hidden;
-	}
+    #cricketFloursLogo{
+width:40%;
+    }
+    
+    .center{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width:100vw;
+    }
+    
+    
+    #teampic{
+        width:35%;
+    }
+    
+    .about{
+        display:block; 
+        font-size:3.2vh;
+        margin:3%;
+        margin-top:1%;
+        opacity:0;
+    }

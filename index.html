@@ -14,17 +14,42 @@
 			$('#fullpage').fullpage({
 				loopTop: true,
 				loopBottom: true,
-                anchors: ['Home', 'secondPage', '3rdPage', '4thpage'],
+                anchors: ['Home', '2ndPage', '3rdPage', '4thpage','5thpage'],
                 afterLoad: function(anchorLink, index){
-					//section 2
-					if(anchorLink == 'secondPage'){
-						$('#section2').find('h1').first().fadeIn(1800,function(){
-                        $('#section2').find('p').first().fadeIn(1800,function(){
-                        $('#section2').find('p').last().fadeIn(1800);
-                        });});
+                    if (anchorLink== 'Home'){
+                        $('#mainlogo').fadeIn(1800,function(){
+                            $('#header').fadeIn(1200);
+                            $('#SquishStigma').fadeTo(1200,1);
+                        });
                     }
-                    if(anchorLink == '3rdPage'){
-						
+					if(anchorLink == '2ndPage'){
+						$('#section2').find('h1').eq(0).fadeTo(1200,1,function(){
+                            $('#section2').find('p').eq(0).fadeTo(1200,1,function(){
+                                $('#section2').find('img').eq(0).fadeTo(1200,1);
+                                $('#section2').find('img').eq(1).fadeTo(1200,1);
+                                $('#section2').find('img').eq(2).fadeTo(1200,1);
+                            });
+                        });
+                    }
+                    
+					if(anchorLink == '3rdPage'){
+						$('#section3').find('h1').eq(0).fadeTo(1200,1,function(){
+                            $('#section3').find('p').eq(0).fadeIn(1200,function(){
+                                $('#section3').find('p').eq(1).fadeIn(1200,function(){
+                                    $('#section3').find('p').eq(2).fadeIn(1200);
+                                });
+                            });
+                        });
+                    }
+                    if(anchorLink == '4thPage'){
+						$('#header').fadeOut(90);
+                        $('video').get(0).play();
+                    }
+                    else 
+                    {
+                        if (anchorLink != 'Home'){
+                            $('#header').fadeIn(90);
+                        }
                     }
 				}
             });  
@@ -39,34 +64,48 @@
         </div>
         <div id='fullpage'>
             <div class="section" id="Intro">
-                <div class="image">
-                    <img id='mainlogo' src="Betty-Cricket-main.svg">
-                </div>
+                <div class='center'><img id='mainlogo' src="Betty-Cricket-main.svg"></div>
                 <div id='SquishStigma'>
                     #SquishingTheStigma
                 </div>
             </div> 
             <div class="section" id="section2">
+                    <h1>About Us</h1>
+                    <div class='center'> 
+                        <img style='opacity:0' id='eip' src='eip.png'>
+                        <img style='opacity:0; margin-right:8%' id='teampic' src='teampic.jpg'>
+                        <img style='opacity:0' id='dgc' src='dgc.png'>
+                    </div>
+                    <p class='about'>We are Betty Cricket and we are trying to make insects a mainstream food source. We are freshmen at the University of Maryland College Park of different majors including Engineering, Computer Science and Elementary Education. As a part of the Entrepreneurship and Innovation program we are participating in the Do Good Challenge, which is an 8 week competition where teams create projects or ventures for social good.</p>
+           </div>
+            <div class="section" id="section3">
                 <div class="text" style='height:100%;margin-top:10%;'>
                     <h1>Why Crickets?</h1>
                     <p>Crickets are an alternative and more sustainable source of protein.</p>
-                    <p>It takes 2000 more gallons of water to produce a pound of beef than a pound of crickets.</p>
+                    <p>It takes 2000 times more water to produce a pound of beef than a pound of crickets.</p>
+                    <p>Our goal is to remove the social stigma surrounding edible insects.</p>
                 </div>
-            </div>    
-            <div class="section" id="section3">
-                <iframe width="100%" height="100%"
-                    src="https://www.youtube.com/embed/AkNA6XOmIhM?autoplay=0&showinfo=0&controls=0"
-                    allowfullscreen
-                    autoplay=0>
-                </iframe>
             </div>    
             <div class="section" id="section4">
+                <video autoplay controls loop id="myVideo">
+			        <source src="cricketshakes.mp4" type="video/mp4">
+		        </video>
+            </div>    
+            <div class="section" id="section5">
                 <div class="slide">
-                    <h1></h1>
+                    <h1 style='opacity:1'>Our Partners</h1>
                 </div>
                 <div class="slide">
+                    <div class='center'>
+                        <a href='http://www.cricketflours.com/'>
+                         <img id='cricketFloursLogo' src='Cricket-Flours-Logo.png'>
+                        </a>
+                    </div>
+                    <p style='display:block; margin:3%;'>Cricket Flours is a start-up company dedicated to producing cricket-based foods including flour, protein powder, and soon brownie mix. We partnered with CEO Charles Wilson in order to bring these healthy and sustainable products to UMD students. In return, we provide them with advertisement to a large market and spread the word about sustainability.</p>
                 </div>
-            </div>       
+            </div>
+            
+           </div>       
         </div>
     </body>
 </html>
