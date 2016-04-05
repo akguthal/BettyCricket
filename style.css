@@ -1,4 +1,4 @@
-@import url('http://weloveiconfonts.com/api/?family=brandico');
+/*@import url('http://weloveiconfonts.com/api/?family=brandico');*/
 
 
 #Intro{
@@ -24,7 +24,7 @@ opacity:0;
     display:none;
     color: #FFFFFF;
     width:100%;
-    height:30px;
+    height: 5vh;
     background:#FFFFFF;
     z-index:9;
 }
@@ -34,10 +34,7 @@ opacity:0;
     transition: transform 0.5s ease-in-out;
 }
 
-#miniLogo{
-width:4vw;
-height:30px;
-}
+#miniLogo{height: 5vh;}
 
 .section{
     background:#000000;
@@ -75,22 +72,23 @@ height:30px;
         background:#F1781B;
     }
 
-/* brandico */
+/* brandico 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
-  font-size:15px;
+  font-size: 2.5vh;
   display:block;
-  margin-top:-13px;
-  margin-left:4px;
+  margin-top: -2.5vh;
+  margin-left: 0.7vh;
+  position: fixed;
 }
 
 a.social-buttons.brandico-facebook::before{
-    margin-left:10px;
+    margin-left: 1.7vh;
 }
 
 a.social-buttons {
-  width:30px;
-  height:30px;
+  width: 5vh;
+  height: 5vh;
   border-radius: 50px;
   text-decoration: none;
   line-height: 60px;
@@ -98,8 +96,7 @@ a.social-buttons {
   float:right;
   transition: transform 0.5s ease-in-out;
   font-family: 'brandico', sans-serif;
-  margin-left:10px;
-
+  margin-left: 1.7vh;
 }
 
 a.brandico-twitter-bird {
@@ -114,6 +111,25 @@ a.social-buttons:hover {
   transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
   opacity:1;
 }
+*/
+
+.mediabutton{
+    width:5vh;
+    float:right;
+    margin-left:1vh;
+    margin-right:1vh;
+      transition: transform 0.5s ease-in-out;
+
+}
+
+.mediabutton:hover{
+   animation: mymove 1s;
+}
+
+
+@keyframes mymove {
+    100% {transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);}
+}
 
 h1{
     text-align:center;
@@ -126,10 +142,11 @@ h1{
 
 p{
     color:#FFFFFF;
-    font-size:2vw;
+    font-size:4vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display:none;
     text-align:center;
+    margin:5%;
 }
 
 #myVideo{
