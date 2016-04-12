@@ -1,6 +1,3 @@
-/*@import url('http://weloveiconfonts.com/api/?family=brandico');*/
-
-
 #Intro{
 background-color: #ed1b24;
 }
@@ -68,50 +65,11 @@ opacity:0;
     background-attachment:fixed;
 }
 
-    #section2{
-        background:#F1781B;
-    }
-
-/* brandico 
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-  font-size: 2.5vh;
-  display:block;
-  margin-top: -2.5vh;
-  margin-left: 0.7vh;
-  position: fixed;
+#section2{
+    background-image:url("umd.jpg");
+    background-size:cover;
+    background-attachment:fixed;
 }
-
-a.social-buttons.brandico-facebook::before{
-    margin-left: 1.7vh;
-}
-
-a.social-buttons {
-  width: 5vh;
-  height: 5vh;
-  border-radius: 50px;
-  text-decoration: none;
-  line-height: 60px;
-  color: white;
-  float:right;
-  transition: transform 0.5s ease-in-out;
-  font-family: 'brandico', sans-serif;
-  margin-left: 1.7vh;
-}
-
-a.brandico-twitter-bird {
-  background-color: #4099FF;
-}
-
-a.brandico-facebook {
-  background-color: #3B5998;
-}
-
-a.social-buttons:hover {
-  transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-  opacity:1;
-}
-*/
 
 .mediabutton{
     width:5vh;
@@ -124,6 +82,8 @@ a.social-buttons:hover {
 
 .mediabutton:hover{
    animation: mymove 1s;
+         transition: transform 0.5s ease-in-out;
+
 }
 
 
@@ -166,7 +126,7 @@ p{
 	}
     
     #cricketFloursLogo{
-width:40%;
+height:20vh;
     }
     
     .center{
@@ -178,13 +138,25 @@ width:40%;
     
     
     #teampic{
-        width:35%;
+        height:50vh;
+    }
+    
+    #eip{
+        height:15vh;
+    }
+    
+    #dgc{
+        height:15vh;
+        margin-right:10%;
     }
     
     .about{
         display:block; 
         font-size:3vh;
+        font-size-adjust: inherit;
         margin:3%;
+        margin-left:15%;
+        margin-right:15%;
         margin-top:1%;
         opacity:0;
     }
