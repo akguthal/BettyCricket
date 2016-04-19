@@ -38,7 +38,7 @@ opacity:0;
 }
 
 #section3{
-    background-image:url("cricket_bg.png");
+    background-image:url("../Graphics/cricket_bg.png");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -60,13 +60,13 @@ opacity:0;
 	}
 
 #section5{
-    background-image:url("handshake.jpg");
+    background-image:url("../Graphics/handshake.jpg");
     background-size:cover;
     background-attachment:fixed;
 }
 
 #section2{
-    background-image:url("umd.jpg");
+    background-image:url("../Graphics/umd.jpg");
     background-size:cover;
     background-attachment:fixed;
 }
